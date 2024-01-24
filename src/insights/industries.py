@@ -5,11 +5,9 @@ from typing import List
 class ProcessIndustries(ProcessJobs):
     def __init__(self):
         super().__init__()
-        
+
     def get_unique_industries(self) -> List[str]:
         industries = {
-        job["industry"]
-          for job in self.jobs_list
-          if job["industry"] != ""
-    }
+            job["industry"] for job in self.jobs_list if job["industry"] != ""
+        }
         return list(industries)
